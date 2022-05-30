@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/tv_course_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course id:"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold |italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_topic"
+        />
+    <TextView android:id="@+id/tv_topic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Topic"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/tv_course_id"
+        app:layout_constraintEnd_toStartOf="@id/tv_date"
+        />
+
+    <TextView android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_course_id"
+        app:layout_constraintBottom_toBottomOf="@id/tv_description"
+        />
+
+    <TextView android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_course_id"
+        app:layout_constraintStart_toStartOf="@id/tv_course_id"
+        app:layout_constraintEnd_toStartOf="@id/tv_date"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
